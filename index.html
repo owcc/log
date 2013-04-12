@@ -1,0 +1,15 @@
+<script src="log.js"></script>
+<script>
+(function(){
+    log('[c="font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; color: #fff; font-size: 20px; padding: 15px 20px; background: #444; border-radius: 4px; line-height: 100px; text-shadow: 0 1px #000"]HubSpot Log[c]');
+    var style = 'font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px; color: #444; padding: 8px 0; line-height: 40px'
+    log.l('%cExample 1', style);
+    log('tests: *italic* and _bold_. *this is italic* and _this is bold_.');
+    log.l('%cExample 2', style);
+    log('this is bold link: _http://google.com_');
+    log.l('%cExample 3', style);
+    log('this is code: `a == b == c`');
+    log.l('%cExample 4', style);
+    log('this is [c="color: red"]red[c]. this is [c="color: green"]green[c].');
+})();
+</script>
