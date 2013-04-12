@@ -1,15 +1,114 @@
-<script src="log.js"></script>
-<script>
-(function(){
-    log('[c="font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; color: #fff; font-size: 20px; padding: 15px 20px; background: #444; border-radius: 4px; line-height: 100px; text-shadow: 0 1px #000"]HubSpot Log[c]');
-    var style = 'font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px; color: #444; padding: 8px 0; line-height: 40px'
-    log.l('%cExample 1', style);
-    log('tests: *italic* and _bold_. *this is italic* and _this is bold_.');
-    log.l('%cExample 2', style);
-    log('this is bold link: _http://google.com_');
-    log.l('%cExample 3', style);
-    log('this is code: `a == b == c`');
-    log.l('%cExample 4', style);
-    log('this is [c="color: red"]red[c]. this is [c="color: green"]green[c].');
-})();
-</script>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chrome Console Grapher</title>
+        <style>
+            * {
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                margin: 0;
+            }
+
+            message {
+                position: fixed;
+                color: #444;
+                font-size: 20px;
+                width: 420px;
+                margin-left: -210px;
+                text-align: center;
+                left: 50%;
+                top: 50%;
+                margin-top: -50px;
+                z-index: 9;
+            }
+
+            instructions {
+                font-size: 153%;
+                margin-top: 11px;
+                display: block;
+            }
+
+            #retweet_button {
+                position: fixed;
+                bottom: 30px;
+                left: 50%;
+                width: 100px;
+                margin-left: -100px;
+            }
+
+            credits {
+                position: fixed;
+                bottom: 35px;
+                left: 50%;
+                width: 130px;
+                font-size: 13px;
+                color: #aaa;
+            }
+
+            credits a, credits a:link, credits a:visited {
+                color: #aaa;
+                text-decoration: none;
+            }
+
+            credits a:hover {
+                text-decoration: underline;
+                color: #444;
+            }
+        </style>
+    </head>
+    <body>
+        <message>
+            Log<br/>
+            <instructions>&nbsp;</instructions>
+        </message>
+
+        <script src="log.js"></script>
+        <script>
+            (function(){
+                if (/Mac OS/.test(navigator.appVersion)) {
+                    document.getElementsByTagName('instructions')[0].innerHTML = 'Press ⌘ + ⌥ + I'
+                } else {
+                    document.getElementsByTagName('instructions')[0].innerHTML = 'Press Ctrl + Shift + I'
+                }
+
+                log('[c="font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; color: #fff; font-size: 20px; padding: 15px 20px; background: #444; border-radius: 4px; line-height: 100px; text-shadow: 0 1px #000"]HubSpot Log[c]');
+                var style = 'font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px; color: #444; padding: 8px 0; line-height: 40px'
+                log.l('%cExample 1', style);
+                log('tests: *italic* and _bold_. *this is italic* and _this is bold_.');
+                log.l('%cExample 2', style);
+                log('this is bold link: _http://google.com_');
+                log.l('%cExample 3', style);
+                log('this is code: `a == b == c`');
+                log.l('%cExample 4', style);
+                log('this is [c="color: red"]red[c]. this is [c="color: green"]green[c].');
+            })();
+        </script>
+
+        <!-- GitHub -->
+        <a href="https://github.com/adamschwartz/log"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+
+        <!-- Share -->
+        <div id="retweet_button">
+            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://adamschwartz.co/log" data-text="console.log for the bold and the reckless, by @adamfschwartz." data-count="horizontal" data-related="adamfschwartz">Tweet</a>
+            <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        </div>
+
+        <credits>
+            By <a href="http://adamschwartz.co">Adam Schwartz</a>
+        </credits>
+
+        <!-- Google Analytics -->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-400802-11']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </body>
+</html>
