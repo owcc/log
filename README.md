@@ -24,3 +24,7 @@ Stylized logs are supported in the following browsers:
 ### Screenshot
 
 ![](https://raw.github.com/adamschwartz/log/gh-pages/screenshot.png)
+
+### Implementations
+
+- Ruby on Rails — [https://github.com/vlado/rails_javascript_log](https://github.com/vlado/rails_javascript_log)
