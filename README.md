@@ -2,8 +2,7 @@
 
 > Console.log with style
 
-### [Demo](http://adamschwartz.co/log/)
-
+THIS REPO IS FORKED FROM git://github.com/adamswartz/log.git THANKS @copyright adamswartz!
 ### Features
 
 - Safely call `log` (instead of `console.log`) in any browser.
