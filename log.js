@@ -15,7 +15,6 @@
                 return args.push(arg);
             }
         });
-        console.log(args)
         return _log.apply(window, args);
     };
 
