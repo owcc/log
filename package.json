@@ -1,11 +1,14 @@
 {
-    "name": "log-with-style",
-    "version": "0.3.0",
+    "name": "logws",
+    "version": "0.3.1",
     "description": "Console.log with style",
-    "author": "Adam Schwartz <adam.flynn.schwartz@gmail.com>",
-    "repository": "git://github.com/adamschwartz/log",
+    "author": "Orlo Wang <ow.cc@outlook.com> Adam Schwartz <adam.flynn.schwartz@gmail.com>",
+    "repository": "git://github.com/owcc/log",
     "license": "MIT",
     "main": "log.js",
+    "scripts": {
+        "start": "grunt"
+    },
     "devDependencies": {
         "grunt-contrib-coffee": "~0.7.0",
         "coffee-script": "~1.6.3",
