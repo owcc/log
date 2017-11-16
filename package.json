@@ -1,6 +1,6 @@
 {
     "name": "logws",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "description": "Console.log with style",
     "author": "Orlo Wang <ow.cc@outlook.com> Adam Schwartz <adam.flynn.schwartz@gmail.com>",
     "repository": "git://github.com/owcc/log",
